@@ -1,4 +1,6 @@
-package test;
+package hust.soict.hedspi.aims.cart;
+
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 
 public class Cart {
 	private int qtyOrdered;
@@ -37,6 +39,11 @@ public class Cart {
 			}
 			System.out.println("All disc of the list has been added.");
 		}
+	}
+	
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		addDigitalVideoDisc(dvd1);
+		addDigitalVideoDisc(dvd2);
 	}
 	/**
 	 * @param disc
