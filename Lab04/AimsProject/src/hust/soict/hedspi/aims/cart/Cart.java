@@ -8,6 +8,10 @@ import hust.soict.hedspi.aims.media.Media;
 public class Cart {
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 	public static final int MAX_NUMBERS_ORDERED = 20;
+	
+	public ArrayList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
 	public double totalCost() {
 		double total = 0;
 		int size = itemsOrdered.size();
@@ -57,7 +61,7 @@ public class Cart {
 		return false;
 	}
 	public void addMedia(Media m) {
-		if (!this.equals(m)) {
+		if (!this.getItemsOrdered().contains(m)) {
 			itemsOrdered.add(m);
 			System.out.println("Item have added sucessfully!");
 			return ;
@@ -65,7 +69,7 @@ public class Cart {
 		System.out.println("Added failed. Item have already in the list.");
 	}
 	public void removeMedia(Media m) {
-		if (this.equals(m)) {
+		if (this.getItemsOrdered().contains(m)) {
 			itemsOrdered.remove(m);
 			System.out.println("Item have deleteed sucessfully!");
 			return ;

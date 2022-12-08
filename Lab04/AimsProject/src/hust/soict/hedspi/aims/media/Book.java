@@ -32,4 +32,15 @@ public class Book extends Media{
 			System.out.println("Remove failed. The author not in the Author list of this book.");
 		}
 	}
+	public String getAuthor() {
+		String s = "";
+		for (String author : authors) {
+			s += author + ", ";
+		}
+		return s;
+	}
+	@Override
+	public String toString() {
+		return "Book - " + this.getId() + " - " + this.getTitle() + " - " + this.getCategory() + " - " + "[" + this.getAuthor() + "]" + " - " + this.getCost() + "$" ;
+	}
 }

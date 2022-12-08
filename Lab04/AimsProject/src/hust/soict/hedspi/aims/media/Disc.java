@@ -26,6 +26,10 @@ public class Disc extends Media{
 		this.setLength(length);
 		this.setDirector(director);
 	}
+	@Override
+	public String toString() {
+		return "";
+	}
 	public Disc(String string) {
 		super(string);
 	}

@@ -3,6 +3,7 @@ package hust.soict.hedspi.aims.media;
 public class DigitalVideoDisc extends Disc implements Playable{
 	// private static int nbDigitalVideoDiscs = 0;
 	
+	@Override
 	public String toString() {
 		return "DVD - " + this.getId() + " - " + this.getTitle() + " - " + this.getCategory() + " - " + this.getDirector() + " - " + this.getLength() + " - " + this.getCost() + "$" ;
 	}

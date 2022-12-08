@@ -10,6 +10,10 @@ public class Store {
 	private int dvdStored = 0;
 	private ArrayList<Media> itemsInStore =  new ArrayList<Media>();
 	
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
+
 	public int getDvdStored() {
 		return dvdStored;
 	}
